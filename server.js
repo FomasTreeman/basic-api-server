@@ -26,8 +26,9 @@ const  database = {
 }
 
 
-app.get('/', (req, res) => {
-    res.json(database.users);    
+app.get('/api/users', (req, res) => {
+    // res.json(database.users);    
+    res.send(JSON.stringify(database.users));
 })
 
 
@@ -70,8 +71,8 @@ app.get('/profile/:id', (req,res) => {
     };
 
 
-app.listen(3000, ()=> {
-    console.log("app is runnign on port 3000");
+app.listen(3001, ()=> {
+    console.log("app is running on port 3001");
 })
 
 //  not necessary as defaults to port 3000 but this is validating the port and logging message for further proof 
