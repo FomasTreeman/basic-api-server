@@ -4,7 +4,7 @@
   "description": "creating an api",
   "main": "index.js",
   "scripts": {
-    "start": "server.js",
+    "start": "node server.js",
     "run": "nodemon server.js" 
   },
   "author": "",
