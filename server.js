@@ -71,9 +71,10 @@ app.get('/profile/:id', (req,res) => {
     };
 
 
-app.listen(3001, ()=> {
-    console.log("app is running on port 3001");
-})
+    const PORT = process.env.PORT || 3000;
+    app.listen(PORT, () => {
+        console.log(`Our app is running on port ${ PORT }`);
+    });
 
 //  not necessary as defaults to port 3000 but this is validating the port and logging message for further proof 
 
